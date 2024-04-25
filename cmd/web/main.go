@@ -21,7 +21,7 @@ type application struct {
 func main() {
 	var port string
 	if port = os.Getenv("PORT"); port == "" {
-		port = "4000"
+		port = "http://localhost:4000"
 	}
 	addr := flag.String("addr", ":"+port, "HTTP network address")
 	dsn := flag.String("dsn", "web:pass@/snippetbox?parseTime=true", "MySQL data source name")
